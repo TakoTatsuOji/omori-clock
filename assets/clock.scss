@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Omori';
+    src: url(fonts/omori_game2-webfont.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 25px;
+    font-family: 'Omori';
+    color: #fff;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/OmoriMewo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+    margin-top: 1.5rem;
+    position: relative;
+    .time-zone-container {
+        width: 100%;
+        .icon {
+            // display inline-block on evry span
+            display: inline-block;
+            width: 25px;
+            height: 30px;
+            background-image: url(img/sunny-violin.gif);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin-right: 14px;
+        }
+        .change-time-zone-mode {
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+    .note {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        filter: invert(100%);
+        transform: rotate(5deg);
+    }
+    h1 {
+        font-size: 4rem;
+        margin: 0;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 16px;
+            width: 65px;
+            height: 40px;
+            display: inline-block;
+            background-image: url(img/mewo.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 23px;
+            width: 62px;
+            height: 7px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+    #time {
+        display: flex;
+        align-items: center;
+        margin-left: 5rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 .7rem;
+            font-size: 2rem;
+        }
+        span {
+            font-size: 2rem;
+        }
+        .colon {
+            font-size: 3rem;
+        }
+        .time-unit {
+            background-color: rgb(238, 237, 237);
+            color: #111;
+            line-height: .6;
+            padding: 3px 7px;
+            border-radius: 9px;
+        }
+        #phase {
+            font-size: 3.5rem;
+            line-height: .6;
+        }
+        #hour,
+        #minute,
+        #second {
+            font-size: 5rem;
+        }
+    }
+    .date-container {
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .date {
+            font-size: 2.5rem;
+        }
+        #birthday {
+            font-size: 2.3rem;
+            width: 300px;
+            margin: 0 auto 0 10.5em;
+        }
+    }
+}
+
+.hero,
+.basil,
+.mari,
+.aubrey,
+.sunny,
+.kel {
+    position: relative;
+}
+
+.hero::after,
+.basil::after,
+.mari::after,
+.aubrey::after,
+.sunny::after,
+.kel::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+.hero {
+    color: #87ceff;
+    &::after {
+        background-image: url(img/dw-hero.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-hero.gif);
+    }
+}
+
+.basil {
+    color: #90ee90;
+    &::after {
+        background-image: url(img/dw-basil.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-basil.gif);
+    }
+}
+
+.mari {
+    color: #8d41c4;
+    &::after {
+        background-image: url(img/dw-mari.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-mari.gif);
+    }
+}
+
+.aubrey {
+    color: #ffc0cb;
+    &::after {
+        background-image: url(img/dw-aubrey.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-aubrey.gif);
+    }
+}
+
+.sunny {
+    color: #fff;
+    &::after {
+        background-image: url(img/dw-omori.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-sunny.gif);
+    }
+}
+
+.kel {
+    color: #ffa500;
+    &::after {
+        background-image: url(img/dw-kel.gif);
+    }
+    &:hover::after {
+        background-image: url(img/fa-kel.gif);
+    }
+}
