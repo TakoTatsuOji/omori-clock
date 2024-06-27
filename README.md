@@ -1,5 +1,4 @@
-
-# Short Project Series 2
+# Mini Project Series 2
 ## Omori-styled web clock
 [Website Link](https://takotatsuoji.github.io/omori-clock/)
 
