@@ -1,6 +1,6 @@
 # Mini Project Series 2
 ## Omori-styled web clock
-[Website Link](https://takotatsuoji.github.io/omori-clock/)
+[Website Link](https://furantuturu.github.io/omori-clock/)
 
 ## Features
 - Included a certain ost "Dear Little Brother" for tunes.                                          
